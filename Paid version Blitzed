@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
     Name = "Blitzed NFL Universe Football | Paid VERSION",
     LoadingTitle = "Blitzed MADE BY EX0",
     LoadingSubtitle = "by ex0",
-    Theme = "Green",
+    Theme = "Bloom",
 
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
@@ -28,9 +28,9 @@ local Window = Rayfield:CreateWindow({
         Subtitle = "Key System",
         Note = "Join discord | for key",
         FileName = "Key",
-        SaveKey = true,
+        SaveKey = false,
         GrabKeyFromSite = false,
-        Key = {"testing!"}
+        Key = {"userwhitelisted8436uy348ygr8h7gh8wg7r8w9eghs!"}
     }
 })
 
@@ -57,7 +57,7 @@ local Slider = MainTab:CreateSlider({
     Name = "Walk Speed",
     Range = {0, 500},
     Increment = 16,
-    Suffix = "Bananas",
+    Suffix = "SPEED",
     CurrentValue = 10,
     Flag = "Slider1",
     Callback = function(Value)
@@ -79,7 +79,7 @@ local ToggleJumpHigh = MainTab:CreateToggle({
         if character and character:FindFirstChild("Humanoid") then
             local humanoid = character.Humanoid
             if isJumpHigh then
-                humanoid.JumpPower = 150
+                humanoid.JumpPower = 200
                 humanoid.JumpHeight = 100
             else
                 humanoid.JumpPower = 50
@@ -100,33 +100,66 @@ local Button = MainTab:CreateButton({
 local Tab = Window:CreateTab("fun activity🧸", 4483362458)
 
 local Button = Tab:CreateButton({
-    Name = "Mag | MUST HAVE GOOD PING",
+    Name = "Mag | Works in park\practice",
     Callback = function()
         -- Wait until the character is loaded
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
 
--- Wait for hands to load
-local leftHand = character:FindFirstChild("LeftHand") or character:WaitForChild("LeftHand")
-local rightHand = character:FindFirstChild("RightHand") or character:WaitForChild("RightHand")
+        -- Wait for hands to load
+        local leftHand = character:FindFirstChild("LeftHand") or character:WaitForChild("LeftHand")
+        local rightHand = character:FindFirstChild("RightHand") or character:WaitForChild("RightHand")
 
--- Adjust transparency and size
-local function enlargeAndMakeTransparent(part)
-    -- Make the hand larger by scaling
-    part.Size = part.Size * Vector3.new(2, 2, 2)  -- Change the scale multiplier as desired
-    -- Make the hand transparent
-    part.Transparency = 0.5  -- Adjust transparency (0 is fully opaque, 1 is fully transparent)
-end
+        -- Function to enlarge and make hands transparent and set a good size for reach
+        local function enlargeAndMakeTransparent(part)
+            -- Scale the hand to be large enough to interact with objects (adjust these values as needed)
+            part.Size = part.Size * Vector3.new(8, 8, 8)  -- Increase the size for better reach and more visibility
+            part.Transparency = 0.8  -- Adjust transparency (0 is fully opaque, 1 is fully transparent)
+            
+            -- Optionally, apply a slight force to the hands to "push" or grab objects (if needed)
+            part.CanCollide = false  -- Disable collisions with other parts
+            part.Anchored = false  -- Make sure it's not anchored to the world (for natural movement)
+        end
 
--- Apply the function to each hand
-enlargeAndMakeTransparent(leftHand)
-enlargeAndMakeTransparent(rightHand)
+        -- Apply the function to each hand
+        if leftHand and rightHand then
+            enlargeAndMakeTransparent(leftHand)
+            enlargeAndMakeTransparent(rightHand)
+        else
+            warn("Hand parts not found!")
+        end
+        
+        -- Make the hands reach out farther (optional)
+        -- Let's make the hands' CFrame position stretch a bit more (not too extreme)
+        local handDistance = 15  -- You can adjust this value based on how far you want the hands to reach
+
+        local function reachOut(part)
+            -- Move the hand a little forward to simulate a "reach"
+            if part then
+                part.CFrame = part.CFrame * CFrame.new(20, 20, -handDistance) 
+            end
+        end
+
+        -- Apply the reach function
+        reachOut(leftHand)
+        reachOut(rightHand)
+
+        -- Optionally, you can add a delay before resetting the position of the hands to avoid them staying too far out
+        wait(0)  -- Wait 1 second (adjustable)
+        leftHand.CFrame = leftHand.CFrame * CFrame.new(20, 20, handDistance)
+        rightHand.CFrame = rightHand.CFrame * CFrame.new(20, 20, handDistance)
     end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "QB AIMBOT | coming soon👀",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
 
 local Button = Tab:CreateButton({
-   Name = "QB AIMBOT | still getting work on",
+   Name = "Ball Tracer | coming soon👀",
    Callback = function()
    -- The function that takes place when the button is pressed
    end,
