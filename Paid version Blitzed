@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 -- List of whitelisted UserIds (You can add any Roblox UserIds that are allowed)
 local whitelistedUserIds = {
     7528009702,  -- Example UserId 1
-    87654321,  -- Example UserId 2
+    373592698,  -- Example UserId 2
     23456789,  -- Example UserId 3
 }
 
