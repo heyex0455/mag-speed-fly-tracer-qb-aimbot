@@ -1,52 +1,11 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
--- List of whitelisted UserIds (You can add any Roblox UserIds that are allowed)
-local whitelistedUserIds = {
-    7528009702,  -- Example UserId 1
-    3172663927,  -- Example UserId 2
-    2313222016,  -- Example UserId 3
-}
 
--- Function to check if the user is whitelisted based on UserId
-local function isUserWhitelisted()
-    local playerId = game.Players.LocalPlayer.UserId
-    for _, id in ipairs(whitelistedUserIds) do
-        if playerId == id then
-            return true
-        end
-    end
-    return false
-end
-
--- Key system check for HWID/UserId validation
-if not isUserWhitelisted() then
-    -- Print message to the Developer Console
-    print("your not whitelisted to this script join discord https://discord.gg/vKRK3Yukpz if you wanna be whitelisted :D")
-
-    Rayfield:Notify({
-        Title = "Access Denied",
-        Content = "your not whitelisted to this script join discord https://discord.gg/vKRK3Yukpz if you wanna be whitelisted :D.",
-        Duration = 5,
-        Image = 4483362458,
-        Actions = {
-            Ignore = {
-                Name = "Okay",
-                Callback = function()
-                    print("User is not whitelisted based on UserId.")
-                    game:Shutdown()  -- Optionally shut down the game
-                end
-            }
-        }
-    })
-    return  -- Exit the script if not whitelisted
-end
-
--- Proceed with the rest of the script if whitelisted
 local Window = Rayfield:CreateWindow({
-    Name = "Blitzed NFL Universe Football | Paid VERSION",
+    Name = "Blitzed NFL Universe Football | Paid VERSION V2",
     LoadingTitle = "Blitzed MADE BY EX0",
     LoadingSubtitle = "by ex0",
-    Theme = "Bloom",
+    Theme = "AmberGlow",
 
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
@@ -69,13 +28,13 @@ local Window = Rayfield:CreateWindow({
         Subtitle = "Key System",
         Note = "Join discord | for key",
         FileName = "Key",
-        SaveKey = false,
+        SaveKey = true,
         GrabKeyFromSite = false,
         Key = {"userwhitelisted8436uy348ygr8h7gh8wg7r8w9eghs!"}
     }
 })
 
-local MainTab = Window:CreateTab("powers⚡", nil) 
+local MainTab = Window:CreateTab("POWERS⚡", nil) 
 local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
@@ -98,7 +57,7 @@ local Slider = MainTab:CreateSlider({
     Name = "Walk Speed",
     Range = {0, 500},
     Increment = 16,
-    Suffix = "SPEED",
+    Suffix = "Bananas",
     CurrentValue = 10,
     Flag = "Slider1",
     Callback = function(Value)
@@ -120,7 +79,7 @@ local ToggleJumpHigh = MainTab:CreateToggle({
         if character and character:FindFirstChild("Humanoid") then
             local humanoid = character.Humanoid
             if isJumpHigh then
-                humanoid.JumpPower = 200
+                humanoid.JumpPower = 150
                 humanoid.JumpHeight = 100
             else
                 humanoid.JumpPower = 50
@@ -133,15 +92,15 @@ local ToggleJumpHigh = MainTab:CreateToggle({
 local Button = MainTab:CreateButton({
     Name = "fly",
     Callback = function()
-        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\57\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\57\102\100\99\100\51\57\48\47\114\97\119\47\101\49\52\101\55\52\102\54\50\53\98\48\56\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\57\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
     end,
 })
 
 -- Tab for fun activities
-local Tab = Window:CreateTab("Magic", )
+local Tab = Window:CreateTab("WR🎯", nil)
 
 local Button = Tab:CreateButton({
-    Name = "Mag | Works in park\practice",
+    Name = "Mag | Works in park & practice",
     Callback = function()
         -- Wait until the character is loaded
         local player = game.Players.LocalPlayer
@@ -154,7 +113,7 @@ local Button = Tab:CreateButton({
         -- Function to enlarge and make hands transparent and set a good size for reach
         local function enlargeAndMakeTransparent(part)
             -- Scale the hand to be large enough to interact with objects (adjust these values as needed)
-            part.Size = part.Size * Vector3.new(8, 8, 8)  -- Increase the size for better reach and more visibility
+            part.Size = part.Size * Vector3.new(5, 5, 8)  -- Increase the size for better reach and more visibility
             part.Transparency = 0.8  -- Adjust transparency (0 is fully opaque, 1 is fully transparent)
             
             -- Optionally, apply a slight force to the hands to "push" or grab objects (if needed)
@@ -172,12 +131,12 @@ local Button = Tab:CreateButton({
         
         -- Make the hands reach out farther (optional)
         -- Let's make the hands' CFrame position stretch a bit more (not too extreme)
-        local handDistance = 15  -- You can adjust this value based on how far you want the hands to reach
+        local handDistance = 10  -- You can adjust this value based on how far you want the hands to reach
 
         local function reachOut(part)
             -- Move the hand a little forward to simulate a "reach"
             if part then
-                part.CFrame = part.CFrame * CFrame.new(20, 20, -handDistance) 
+                part.CFrame = part.CFrame * CFrame.new(9, 9, -handDistance)
             end
         end
 
@@ -186,22 +145,133 @@ local Button = Tab:CreateButton({
         reachOut(rightHand)
 
         -- Optionally, you can add a delay before resetting the position of the hands to avoid them staying too far out
-        wait(0)  -- Wait 1 second (adjustable)
-        leftHand.CFrame = leftHand.CFrame * CFrame.new(20, 20, handDistance)
-        rightHand.CFrame = rightHand.CFrame * CFrame.new(20, 20, handDistance)
+        wait(1)  -- Wait 1 second (adjustable)
+        leftHand.CFrame = leftHand.CFrame * CFrame.new(9, 9, handDistance)
+        rightHand.CFrame = rightHand.CFrame * CFrame.new(9, 9, handDistance)
     end,
 })
 
 local Button = Tab:CreateButton({
-   Name = "QB AIMBOT | coming soon👀",
+   Name = "Pull-Vector | Still in beta",
    Callback = function()
    -- The function that takes place when the button is pressed
    end,
 })
 
 local Button = Tab:CreateButton({
-   Name = "Ball Tracer | coming soon👀",
+   Name = "Gravity [ 192.6 Default ]| Still in beta",
    Callback = function()
    -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hitbox Expander for ball so it can tp to hands| Still in beta",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local QBTab = Window:CreateTab("QB🏈", nil)
+
+local Toggle = QBTab:CreateToggle({
+   Name = "Quarterback Aimbot | still in beta",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local Toggle = QBTab:CreateToggle({
+   Name = "Auto Rush | still in beta",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local VISUALSTab = Window:CreateTab("VISUALS👀", nil)
+
+local Button = VISUALSTab:CreateButton({
+   Name = "Ball Tracer | still in beta ",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = VISUALSTab:CreateButton({
+   Name = "Position Dot | still in beta",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local MISCTab = Window:CreateTab("MISC 🔗", nil)
+
+local Toggle = MISCTab:CreateToggle({
+   Name = "Autoboost",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local Toggle = MISCTab:CreateToggle({
+   Name = "Tackle Reach",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local Toggle = MISCTab:CreateToggle({
+   Name = "Anti-Jam",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local Toggle = MISCTab:CreateToggle({
+   Name = "TP To Ball Carrier",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local EXSTRATab = Window:CreateTab("EXSTRA 🔮", nil)
+
+local Button = EXSTRATab:CreateButton({
+   Name = "REJOIN",
+   Callback = function()
+   -- LocalScript to allow rejoining the game
+
+local player = game.Players.LocalPlayer
+local teleportService = game:GetService("TeleportService")
+
+-- Function to rejoin the game
+local function rejoinGame()
+    -- Get the place ID of the current game
+    local placeId = game.PlaceId
+    -- Teleport the player to the same game (this will act like a rejoin)
+    teleportService:Teleport(placeId, player)
+end
+
+-- Call the function to rejoin
+rejoinGame()
+
    end,
 })
