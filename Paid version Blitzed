@@ -3,7 +3,7 @@ local hwid = game:GetService("RbxAnalyticsService"):GetClientId() -- Getting HWI
 -- List of whitelisted HWIDs
 local whitelistedHWIDs = {
     "96613BF5-1249-4C32-8DF5-561C748ADAFD",  -- Replace with the actual HWIDs of the whitelisted users
-    "your_hwid_2",  -- Add more HWIDs as needed
+    "CB3C3241-1215-4C70-A6DB-00FBFB61A2EB",  -- Add more HWIDs as needed
 }
 
 -- Check if the user's HWID is whitelisted
