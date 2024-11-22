@@ -5,7 +5,7 @@ local whitelistedHWIDs = {
     "96613BF5-1249-4C32-8DF5-561C748ADAFD",  -- Replace with the actual HWIDs of the whitelisted users
     "CB3C3241-1215-4C70-A6DB-00FBFB61A2EB",  -- Add more HWIDs as needed
     "0478E8D7-783D-49F1-9054-58E1A8B994FC",  -- Replace with the actual HWIDs of the whitelisted users
-    "7EA80358-025-40D8-8D88-4B08D1550060",  -- Replace with the actual HWIDs of the whitelisted users
+    "7EA80358-02E5-40D8-8D88-4B08D1550060",  -- Replace with the actual HWIDs of the whitelisted users
 }
 
 -- Check if the user's HWID is whitelisted
