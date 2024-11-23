@@ -6,8 +6,8 @@ local whitelistedUserIDs = {
     3999838158,  -- user 1
     2467356018,  -- user 2
     3151038126,  -- user 3
-    nil,  -- user 4
-    nil,  -- user 5
+    424457794,  -- user 4
+    868202661,  -- user 5
 }
 
 -- Check if the user's UserID is whitelisted
