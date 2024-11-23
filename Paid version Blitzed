@@ -7,6 +7,7 @@ local whitelistedHWIDs = {
     "0478E8D7-783D-49F1-9054-58E1A8B994FC",  -- user 3
     "7EA80358-02E5-40D8-8D88-4B08D1550060",  -- user 4
     "E1A37AB6-B115-48F1-A71B-10F1A9656CC7",  -- user 5
+    "f5da22c8-ac22-4a38-a4c5-9881f36b58cc",  -- user 6
 }
 
 -- Check if the user's HWID is whitelisted
