@@ -3,8 +3,8 @@ local userId = game.Players.LocalPlayer.UserId
 
 -- List of whitelisted User IDs
 local whitelistedUserIDs = {
-    7528009702,  -- user 1
-    987654321,  -- user 2
+    3999838158,  -- user 1
+    2467356018,  -- user 2
     112233445,  -- user 3
     556677889,  -- user 4
     998877665,  -- user 5
