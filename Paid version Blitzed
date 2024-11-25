@@ -48,7 +48,7 @@ local Window = Rayfield:CreateWindow({
         Invite = "",
         RememberJoins = true
     },
-    KeySystem = true,
+    KeySystem = false,
     KeySettings = {
         Title = "NFL Universe Football🏈 | made by ex0",
         Subtitle = "Key System",
