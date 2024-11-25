@@ -10,6 +10,7 @@ local whitelistedUserIDs = {
     868202661,  -- user 5
     5655582,  -- user 6
     2445228,  -- user 7
+    2211006224, -- user7
 }
 
 -- Check if the user's UserID is whitelisted
